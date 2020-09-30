@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form method="get">
+    <table cellpadding="5px" style="margin: auto">
+        <tr>
+            <th>Amount</th>
+            <th>Form Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input id="input" type="number" value="">
+            </td>
+            <td>
+                <select id = "form" value="">
+                    <option name="VND" value="23000">VND</option>
+                    <option name="USD" value="1">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="to" value="">
+                    <option name="VND" value="23000">VND</option>
+                    <option name="USD" value="1">USA</option>
+                </select>
+            </td>
+            <td><button onclick="doitien()">Convert</button></td>
+        </tr>
+    </table>
+</form>
+<script>
+
+
+    function doitien() {
+        var i = document.getElementById("input").value;
+        var f = document.getElementById("form").value;
+        var t = document.getElementById("to").value;
+        var ketqua = (i*t)/f;
+    document.writeln(ketqua);
+    }
+
+</script>
+</body>
+</html>
